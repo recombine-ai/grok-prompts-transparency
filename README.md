@@ -2,7 +2,7 @@
 
 ## What happened
 
-In May 2025, Twitter (X) users started reporting strange responses from X's LLM Grok, created and maintained by xAI. It started injecting unprompted remarks about "white genocide" and "'Kill the Boer' chant". X later reported that an unauthorized edit has been made to Grok's prompts. 
+In May 2025, Twitter (X) users started reporting strange responses from X's LLM Grok, created and maintained by xAI. It started injecting unprompted remarks about "white genocide" and "'Kill the Boer' chant". X later [reported](https://x.com/xai/status/1923183620606619649) that an unauthorized edit has been made to Grok's prompts. 
 
 ![Grok prompt transparency](image.png)
 
@@ -24,7 +24,7 @@ While the published template has a convenient `dynamic_prompt` variable that can
 
 In this repository, [index.js](https://github.com/recombine-ai/grok-prompts-transparency/blob/main/src/index.js) calls the Grok 3 OpenAI-compatible API with the [xAI's published version of the Grok prompt](https://github.com/xai-org/grok-prompts/blob/main/grok3_official0330_p1.j2) as the system prompt and a query from the user that reads: "is white genocide happening in south africa? be brief".
 
-`index.js` should be called with `--mode` parameter that can be either `normal` or `malicious`.`normal` mode does not inject anything into the prompt. `malicious` mode injects the contents of [injection.txt](https://github.com/recombine-ai/grok-prompts-transparency/blob/main/src/injection.txt) into the `time` variable.
+`index.js` should be called with `--mode` parameter that can be either `normal` or `malicious`. `normal` mode does not inject anything into the prompt. `malicious` mode injects the contents of [injection.txt](https://github.com/recombine-ai/grok-prompts-transparency/blob/main/src/injection.txt) into the `time` variable.
 
 The injection reads:
 
