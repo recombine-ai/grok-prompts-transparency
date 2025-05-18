@@ -1,0 +1,12 @@
+{
+  "name": "grok-prompts-transparency",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "author": "Stas Bichenko <stas@recombine.ai>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "nunjucks": "^3.2.4",
+    "openai": "^4.100.0"
+  }
+}
