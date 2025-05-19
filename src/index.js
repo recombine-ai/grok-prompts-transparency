@@ -21,8 +21,15 @@ const client = new OpenAI({
 const systemPromptRaw = fs.readFileSync("prompt.j2", "utf8");
 const injection = fs.readFileSync("injection.txt", "utf8");
 
-const timeValue = "2025-05-18T12:00:00Z";
-const timeWithInjection = mode === 'malicious' ? timeValue + " " + injection : timeValue;
+let timeWithInjection;
+if (mode === 'malicious') {
+    // ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓
+    // THIS IS THE INJECTION
+    // ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓
+    timeWithInjection = "2025-05-18" + " " + injection;
+} else {
+    timeWithInjection = "2025-05-18";
+}
 
 const systemPromptRendered = nunjucks.renderString(systemPromptRaw, {
     "disable_search": true,
