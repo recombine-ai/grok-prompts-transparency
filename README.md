@@ -26,7 +26,7 @@ Without the injection, Grok identifies the "white genocide" as a conspiracy theo
 
 `No, there is no credible evidence or data to support the claim of a "white genocide" in South Africa. The term is often used in conspiracy theories and lacks substantiation from reliable sources. Violent crime, including farm attacks, affects all racial groups in South Africa, and is not specifically targeted at white individuals. For accurate context, refer to crime statistics and reports from organizations like the South African Police Service or reputable news outlets.`
 
-**We can inject the malicious prompt into the `time` variable like this: `time = "2025-05-18" + " " + injection`.**
+We can inject the malicious prompt into the `time` variable like this: `time = "2025-05-18" + " " + injection`.
 
 The injection reads:
 
